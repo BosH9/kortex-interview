@@ -1,0 +1,22 @@
+<div class="content">
+  <div fxLayout="row" fxLayoutGap="grid" fxLayoutAlign="center center" *ngIf="loading$ | async">
+    <h1>Loading...</h1>
+  </div>
+
+  <div class="books-div" fxLayout="row wrap" fxLayoutGap="grid 16px" fxLayoutAlign="center center"
+    fxLayout.sm="column">
+    <div *ngFor="let book of books$ | async; trackBy:trackByBook">
+      <mat-card class="book-card">
+        <img mat-card-image src="{{book?.imageLinks?.thumbnail}}">
+        <mat-card-content>
+          <span class="book-title">
+            {{book?.title}}
+          </span>
+        </mat-card-content>
+        <mat-card-footer>
+          <button mat-button (click)="removeFromFavourite(book)">Remove</button>
+        </mat-card-footer>
+      </mat-card>
+    </div>
+  </div>
+</div>

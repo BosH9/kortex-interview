@@ -1,0 +1,24 @@
+<div class="content" fxLayoutGap="grid" fxLayoutAlign="center">
+    <div fxLayout="row">
+        <div fxFlex="30%" class="center center">
+            <img class="w-100" *ngIf="book?.imageLinks?.thumbnail" [src]="book?.imageLinks?.thumbnail" />
+        </div>
+        <div fxFlex="70%" class="right">
+            <h2>{{ book?.title }}</h2>
+            <p *ngIf="subtitle">{{ book?.subtitle }}</p>
+
+            <p [innerHtml]="book?.description"></p>
+
+            <h4>Authors</h4>
+            <p>{{book?.authors?.join(', ')}}</p>
+
+
+            <button *ngIf="!book?.isFavourite" mat-raised-button color="primary" (click)='addToFavourite()'>
+                Favourite
+            </button>
+            <button mat-raised-button color="secondary" (click)='goBack()'>
+                Back
+            </button>
+        </div>
+    </div>
+</div>

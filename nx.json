@@ -25,6 +25,21 @@
     "book-store-e2e": {
       "tags": [],
       "implicitDependencies": ["book-store"]
+    },
+    "material": {
+      "tags": []
+    },
+    "api": {
+      "tags": []
+    },
+    "book-store-books": {
+      "tags": []
+    },
+    "book-store-state": {
+      "tags": []
+    },
+    "book-store-bookmarks": {
+      "tags": []
     }
   }
 }

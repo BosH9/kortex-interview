@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.books-div {
+    margin-top: 20px;
+}
+
+.book-card {
+    width: 150px;
+    margin: 10px;
+}
+
+.mat-card-image {
+    height: 200px;
+}
+
+.book-title {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.search-div {
+    position: sticky;
+    top: 0;
+    background: #ffffff;
+    z-index: 10;
+    border-bottom-style: inset;
+}

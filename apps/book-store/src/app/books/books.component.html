@@ -1,0 +1,13 @@
+<div class="search" fxLayout="row" fxLayoutAlign="center center">
+    <form [formGroup]="booksForm">
+        <div style="text-align: center;">
+            <h1>Welcome to Kortext Books</h1>
+        </div>
+        <mat-form-field appearance="outline">
+            <input  matInput formControlName="query" id="keyword" type="search" placeholder="Search your favourtie books"
+                class="search-input" autocomplete="off" (keyup.enter)="search()">
+            <mat-icon matSuffix>search</mat-icon>
+            <mat-hint>Please use Enter key ↩ </mat-hint>
+        </mat-form-field>
+    </form>
+</div>
